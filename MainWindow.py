@@ -15,9 +15,7 @@ class MainWindow(QtGui.QMainWindow, Ui_MainWindow):
     """
     def __init__(self, parent=None):
         """
-        Constructor
-        
-        @param parent reference to the parent widget (QWidget)
+        Constructor of main window
         """
         QtGui.QMainWindow.__init__(self, parent)
         self.setupUi(self)
