@@ -18,7 +18,7 @@
     <property name="geometry">
      <rect>
       <x>90</x>
-      <y>30</y>
+      <y>10</y>
       <width>131</width>
       <height>31</height>
      </rect>
@@ -31,7 +31,7 @@
     <property name="geometry">
      <rect>
       <x>90</x>
-      <y>70</y>
+      <y>50</y>
       <width>131</width>
       <height>31</height>
      </rect>
@@ -44,7 +44,7 @@
     <property name="geometry">
      <rect>
       <x>90</x>
-      <y>110</y>
+      <y>90</y>
       <width>131</width>
       <height>31</height>
      </rect>
@@ -124,7 +124,7 @@
    <widget class="QPushButton" name="getIPBtn">
     <property name="geometry">
      <rect>
-      <x>20</x>
+      <x>30</x>
       <y>170</y>
       <width>91</width>
       <height>23</height>
@@ -134,10 +134,10 @@
      <string>获取IP</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="AtkBtn">
+   <widget class="QPushButton" name="atkBtn">
     <property name="geometry">
      <rect>
-      <x>130</x>
+      <x>150</x>
       <y>170</y>
       <width>91</width>
       <height>23</height>
@@ -147,24 +147,27 @@
      <string>攻击</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="StopBtn">
+   <widget class="QPushButton" name="quitBtn">
     <property name="geometry">
      <rect>
-      <x>240</x>
+      <x>270</x>
       <y>170</y>
       <width>91</width>
       <height>23</height>
      </rect>
     </property>
     <property name="text">
-     <string>停止</string>
+     <string>退出</string>
+    </property>
+    <property name="shortcut">
+     <string>Ctrl+Q</string>
     </property>
    </widget>
    <widget class="QLabel" name="lb_1">
     <property name="geometry">
      <rect>
       <x>30</x>
-      <y>40</y>
+      <y>20</y>
       <width>52</width>
       <height>14</height>
      </rect>
@@ -177,7 +180,7 @@
     <property name="geometry">
      <rect>
       <x>30</x>
-      <y>80</y>
+      <y>60</y>
       <width>52</width>
       <height>14</height>
      </rect>
@@ -190,7 +193,7 @@
     <property name="geometry">
      <rect>
       <x>30</x>
-      <y>120</y>
+      <y>100</y>
       <width>52</width>
       <height>14</height>
      </rect>
@@ -199,8 +202,48 @@
      <string>目标端口:</string>
     </property>
    </widget>
+   <widget class="QLineEdit" name="countInput">
+    <property name="geometry">
+     <rect>
+      <x>90</x>
+      <y>130</y>
+      <width>131</width>
+      <height>31</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="lb_4">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>140</y>
+      <width>52</width>
+      <height>14</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>攻击次数:</string>
+    </property>
+   </widget>
   </widget>
  </widget>
  <resources/>
- <connections/>
+ <connections>
+  <connection>
+   <sender>quitBtn</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>333</x>
+     <y>178</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>256</x>
+     <y>166</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
 </ui>
