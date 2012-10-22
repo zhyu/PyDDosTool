@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file '/home/zhyu/workspace/PyDDosTool/MainWindow.ui'
 #
-# Created: Mon Oct 22 22:15:55 2012
+# Created: Mon Oct 22 22:56:07 2012
 #      by: pyside-uic 0.2.13 running on PySide 1.1.1
 #
 # WARNING! All changes made in this file will be lost!
@@ -87,6 +87,7 @@ class Ui_MainWindow(object):
         self.lb_1.setText(QtGui.QApplication.translate("MainWindow", "目标域名:", None, QtGui.QApplication.UnicodeUTF8))
         self.lb_2.setText(QtGui.QApplication.translate("MainWindow", "目标IP:", None, QtGui.QApplication.UnicodeUTF8))
         self.lb_3.setText(QtGui.QApplication.translate("MainWindow", "目标端口:", None, QtGui.QApplication.UnicodeUTF8))
+        self.countInput.setText(QtGui.QApplication.translate("MainWindow", "10", None, QtGui.QApplication.UnicodeUTF8))
         self.lb_4.setText(QtGui.QApplication.translate("MainWindow", "攻击次数:", None, QtGui.QApplication.UnicodeUTF8))
 
 

